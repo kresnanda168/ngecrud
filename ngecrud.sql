@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2022 at 07:32 PM
+-- Generation Time: Jul 03, 2022 at 05:57 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -41,8 +41,28 @@ CREATE TABLE `gudangbaju` (
 --
 
 INSERT INTO `gudangbaju` (`id_produk`, `nama_barang`, `brand`, `harga_barang`, `stok_barang`) VALUES
-(3, 'T Shirt', 'HnM', 100000, 99),
-(4, 'sad', '3sec', 0, 0);
+(4, 'T Shirt', 'Ripcurl', 150000, 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gudangbaju2`
+--
+
+CREATE TABLE `gudangbaju2` (
+  `id_produk` int(11) NOT NULL,
+  `nama_barang` varchar(20) NOT NULL,
+  `brand` varchar(20) NOT NULL,
+  `harga_barang` int(5) NOT NULL,
+  `stok_barang` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gudangbaju2`
+--
+
+INSERT INTO `gudangbaju2` (`id_produk`, `nama_barang`, `brand`, `harga_barang`, `stok_barang`) VALUES
+(2, 'T-Shirt', 'Ripcurl', 150000, 100);
 
 --
 -- Indexes for dumped tables
@@ -52,6 +72,12 @@ INSERT INTO `gudangbaju` (`id_produk`, `nama_barang`, `brand`, `harga_barang`, `
 -- Indexes for table `gudangbaju`
 --
 ALTER TABLE `gudangbaju`
+  ADD PRIMARY KEY (`id_produk`);
+
+--
+-- Indexes for table `gudangbaju2`
+--
+ALTER TABLE `gudangbaju2`
   ADD PRIMARY KEY (`id_produk`);
 
 --
